@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Shifaa 🌷</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=Playfair+Display:ital,wght@1,600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg,#f7eaff,#ffe6f0,#e4f6ff);
+  font-family: Cairo, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 22px;
+  overflow-x: hidden;
+  color: #806b91;
+}
+
+#sky {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.float {
+  position: absolute;
+  bottom: -40px;
+  animation: fly 9s linear forwards;
+  opacity: 0;
+}
+
+@keyframes fly {
+  0% {transform:translateY(0) rotate(0);opacity:0}
+  15% {opacity:.8}
+  100% {transform:translateY(-110vh) rotate(360deg);opacity:0}
+}
+
+.container {
+  width: 100%;
+  max-width: 420px;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.small-title {
+  font-family: 'Playfair Display',serif;
+  color: #b28ac4;
+  letter-spacing: 2px;
+  font-size: 17px;
+}
+
+h1 {
+  font-size: 42px;
+  color: #a77bb7;
+  margin: 8px 0;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: #9c84a7;
+  margin-bottom: 22px;
+}
+
+.flowers {
+  font-size: 40px;
+  margin: 12px;
+  animation: sway 3s ease-in-out infinite;
+}
+
+@keyframes sway {
+  0%,100% {transform:rotate(-5deg)}
+  50% {transform:rotate(5deg)}
+}
+
+.envelope-area {
+  height: 205px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.envelope {
+  position: relative;
+  width: 225px;
+  height: 140px;
+  background: #e7b9e9;
+  border-radius: 8px;
+  box-shadow: 0 15px 35px #ac83b455;
+  cursor: pointer;
+  transition: .5s;
+}
+
+.envelope:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #f4d2f0;
+  clip-path: polygon(0 0,50% 60%,100% 0);
+  z-index: 4;
+  transform-origin: top;
+  transition: .7s;
+}
+
+.envelope:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #d6a6df;
+  clip-path: polygon(0 100%,50% 43%,100% 100%);
+  z-index: 3;
+}
+
+.letter {
+  position: absolute;
+  width: 185px;
+  height: 125px;
+  left: 20px;
+  bottom: 8px;
+  background: #fffafd;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 2;
+  transition: .8s;
+}
+
+.letter span {
+  font-size: 32px;
+}
+
+.seal {
+  position: absolute;
+  top: 50px;
+  left: 95px;
+  font-size: 32px;
+  z-index: 5;
+  transition: .4s;
+}
+
+.envelope.open:before {
+  transform: rotateX(180deg);
+}
+
+.envelope.open .letter {
+  transform: translateY(-105px);
+}
+
+.envelope.open .seal {
+  opacity: 0;
+}
+
+.hint {
+  font-size: 13px;
+  color: #aa8bb2;
+  animation: blink 1.5s infinite;
+}
+
+@keyframes blink {
+  50% {opacity:.4}
+}
+
+.card {
+  display: none;
+  background: rgba(255,255,255,.83);
+  border: 1px solid white;
+  border-radius: 28px;
+  padding: 28px 21px;
+  box-shadow: 0 15px 40px #ad8bb533;
+  animation: show .8s ease;
+}
+
+@keyframes show {
+  from {opacity:0;transform:translateY(25px)}
+  to {opacity:1;transform:translateY(0)}
+}
+
+.card h2 {
+  font-size: 27px;
+  color: #a87db5;
+  margin: 10px 0;
+}
+
+.big-flower {
+  font-size: 55px;
+  animation: sway 2s infinite;
+  display: inline-block;
+}
+
+.line {
+  width: 65px;
+  height: 2px;
+  background: #e5b6e7;
+  margin: 15px auto;
+}
+
+.message {
+  font-size: 15px;
+  line-height: 2.3;
+  color: #806d91;
+}
+
+button {
+  border: none;
+  border-radius: 30px;
+  background: linear-gradient(120deg,#c9a1dc,#f1b5d4);
+  color: white;
+  padding: 13px 23px;
+  font-family: Cairo;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 20px;
+  box-shadow: 0 6px 16px #c49acb66;
+}
+
+.extra {
+  display: none;
+  margin-top: 20px;
+  line-height: 2.2;
+  color: #a176b0;
+  animation: show .7s;
+}
+
+.footer {
+  font-family: 'Playfair Display',serif;
+  font-size: 12px;
+  margin-top: 25px;
+  color: #b39bbd;
+  letter-spacing: 2px;
+}
+</style>
+</head>
+
+<body>
+
+<div id="sky"></div>
+
+<div class="container">
+
+  <div class="small-title">A LITTLE GIFT FOR YOU</div>
+
+  <div class="flowers">🌷🦋🌷</div>
+
+  <h1>Shifaa</h1>
+
+  <div class="subtitle">
+    لأنك صاحبة تستاهل كل حاجة حلوة ♡
+  </div>
+
+  <div class="envelope-area" id="envelopeArea">
+    <div class="envelope" id="envelope" onclick="openGift()">
+
+      <div class="letter">
+        <span>💌</span>
+        <small style="color:#ac87b8">To my lovely friend</small>
+      </div>
+
+      <div class="seal">🌸</div>
+
+    </div>
+  </div>
+
+  <div class="hint" id="hint">
+    افتحي الظرف يا شفاء 🥹
+  </div>
+
+  <div class="card" id="card">
+
+    <div class="big-flower">💐</div>
+
+    <h2>إلى شفاء الجميلة ♡</h2>
+
+    <div class="line"></div>
+
+    <div class="message">
+      مش كل الهدايا لازم تكون غالية،<br>
+      ساعات أبسط حاجة بتكون أجمل ذكرى 💗<br><br>
+
+      حبيت أعملك حاجة صغيرة مخصوص ليكي،<br>
+      عشان أقولك إنك تستاهلي الفرح<br>
+      والضحكة وكل الأيام الحلوة 🌷<br><br>
+
+      ربنا يخليكي دايمًا منورة،<br>
+      ويحققلك كل اللي نفسك فيه،<br>
+      وتفضلي دايمًا مبسوطة وناجحة 🦋
+    </div>
+
+    <button onclick="showExtra()">
+      لسه في مفاجأة كمان 👀
+    </button>
+
+    <div class="extra" id="extra">
+      <div style="font-size:40px">🎀🌸💗</div>
+
+      يا شفاء، خليكي فاكرة دايمًا<br>
+      إنك تستاهلي أحلى الحاجات في الدنيا.<br><br>
+
+      <strong>Best friends, beautiful memories! ♡</strong>
+    </div>
+
+  </div>
+
+  <div class="footer">
+    MADE WITH LOVE FOR SHIFAA ♡
+  </div>
+
+</div>
+
+<script>
+const sky = document.getElementById("sky");
+
+const icons = ["🌸","💕","✨","🦋","🌷","♡"];
+
+function createFloat() {
+  const item = document.createElement("div");
+
+  item.className = "float";
+  item.textContent =
+    icons[Math.floor(Math.random()*icons.length)];
+
+  item.style.left = Math.random()*100 + "%";
+  item.style.fontSize = (15+Math.random()*17)+"px";
+  item.style.animationDuration = (6+Math.random()*6)+"s";
+
+  sky.appendChild(item);
+
+  setTimeout(() => item.remove(),13000);
+}
+
+setInterval(createFloat,450);
+
+let opened = false;
+
+function openGift() {
+  if(opened) return;
+
+  opened = true;
+
+  document.getElementById("envelope")
+    .classList.add("open");
+
+  setTimeout(() => {
+    document.getElementById("envelopeArea").style.display="none";
+    document.getElementById("hint").style.display="none";
+    document.getElementById("card").style.display="block";
+  },1000);
+}
+
+function showExtra() {
+  document.getElementById("extra").style.display="block";
+
+  for(let i=0;i<25;i++) {
+    setTimeout(createFloat,i*100);
+  }
+}
+</script>
+
+</body>
+</html>
